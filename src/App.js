@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Space from './components/space';
+import Picture from './components/Picture';
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
         Nasa Data
       </h1>
       <div className= "DataContainer">
-        <h2 className="h2Title">Api Below</h2> 
+        <Picture/>
+        <h2 className="h2Title">Astroid data Below</h2> 
         <div className="ApiData">
           <Space/>
         </div>

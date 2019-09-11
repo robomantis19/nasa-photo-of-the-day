@@ -5,14 +5,14 @@ import axios from 'axios';
 
 const Space = function(){
     const [nasa, setNasa] = useState([]);
-
+   
     useEffect(() => {
         axios.get(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=PoE0g5C9HMC6gBJKPbJHYejVbLbwqxrEVWaBACA0`)
         .then(response => {
             const nasa = response.data.near_earth_objects; 
-            const NEO = response.data.near_earth_objects.close_approach_data
+            
             console.log("nasa data: ", nasa);
-            console.log("NEO: ", NEO)
+            
             setNasa(nasa);
         })
         .catch( error => {
@@ -20,6 +20,9 @@ const Space = function(){
         })
     
     },[])
+    
+    
+    
 
     return (
         <div className="astroidContainer">
