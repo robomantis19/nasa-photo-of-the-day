@@ -21,16 +21,16 @@ export default class DropDown extends React.Component {
     return (
       <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-          Dropdown
+          Astroid Central
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem header>Header</DropdownItem>
-          <DropdownItem>Some Action</DropdownItem>
-          <DropdownItem disabled>Action (disabled)</DropdownItem>
+          <DropdownItem header>Home</DropdownItem>
+          <DropdownItem>Zoom In</DropdownItem>
+          <DropdownItem disabled>Zoom Out</DropdownItem>
           <DropdownItem divider />
-          <DropdownItem>Foo Action</DropdownItem>
-          <DropdownItem>Bar Action</DropdownItem>
-          <DropdownItem>Quo Action</DropdownItem>
+          <DropdownItem href="#DataContainer">All Astroids</DropdownItem>
+          <DropdownItem>Near Earth Objects</DropdownItem>
+          <DropdownItem>JPL Links</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     );

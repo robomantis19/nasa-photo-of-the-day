@@ -1,6 +1,18 @@
 import React, {useState, useEffect} from 'react'; 
 import SpaceList from './spaceList';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const CardContain = styled.div`
+    width: 1000px;
+    height: 100%;
+    background-color: transparent;
+    
+    display:flex;
+    
+    flex-wrap: wrap;
+
+`
 
 
 const Space = function(){
@@ -25,7 +37,7 @@ const Space = function(){
     
 
     return (
-        <div className="astroidContainer">
+        <CardContain>
             {nasa.map((astroid, index, array) => {
                 return(
                     <SpaceList
@@ -40,7 +52,7 @@ const Space = function(){
                     />
                 );
             })}
-        </div>
+        </CardContain>
     );
 }
 

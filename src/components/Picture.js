@@ -19,7 +19,7 @@ function Picture(){
     return(
         <div>
             <h2> Astronomy picture of the day</h2>
-            <img style={{width:"500px", marginBottom: '50px'}} src={pic} alt= 'space planet picture of day'/>
+            <img id = "mypic" style={{width:"500px", marginBottom: '50px'}} src={pic} alt= 'space planet picture of day'/>
         </div>
     )
 }
