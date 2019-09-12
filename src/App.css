@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+  background-image: url("./nasaUnsplash.jpg");
+  background-size: 2000px;
+  background-repeat: repeat;
+  margin-bottom: 0;
+}
+html{
+  bacground-color: black;
+}
+.dd{
+  text-align: left;
+  width: 200px;
+}
+.ddtitle{
+  margin-top: -60px;;
 }
 
 .App-logo {
@@ -30,4 +44,67 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.DataContainer{
+  padding-top: 2%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 6200px;
+  margin-bottom: 100px;
+  /* background-color: brown; */
+}
+.h1Title{
+  padding-top: 2%;
+  margin-top: 0;
+  margin-bottom: 100px;
+  height:80px;
+  background-color: brown;
+}
+.h2Title{
+  width: 500px;
+  margin: auto;
+  padding-bottom: 5%;
+  border-bottom: 2px solid #61dafb;
+  color: white;
+  font-weight: bold;
+  color: #61dafb;
+  text-shadow: 0 5px 10px #777;
+  background-color: black;
+  padding-top: 50px;
+  box-shadow: 0 5px 10px #777;
+}
+
+.ApiData{
+  width: 1000px;
+  height: 5400px;
+  margin: auto;
+  
+  border: 4px solid transparent;
+  box-shadow: 0 5px 10px #777;
+  background-color: transparent;
+  display: flex;
+  
+}
+.card{
+  width: 400px;
+  height: 400px;
+  margin: 50px;
+  background-color: white;
+  border: 2px solid black;
+
+}
+.astroidContainer{
+  max-width: 900px;
+  height: 1800px;
+}
+p{
+  text-align: left;
+  font-size: 1.5rem;
+  border: 1px solid black;
+}
+h2{
+  color: white;
 }
