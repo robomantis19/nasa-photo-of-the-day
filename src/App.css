@@ -1,6 +1,13 @@
 .App {
   text-align: center;
 }
+.dd{
+  text-align: left;
+  width: 200px;
+}
+.ddtitle{
+  margin-top: -60px;;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
