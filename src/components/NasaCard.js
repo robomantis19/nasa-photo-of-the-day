@@ -1,11 +1,12 @@
 import React from 'react'; 
 
 
-function NasaCard(){
+function NasaCard(props){
     
     
     return (
         <div>
+            {props.date}
         </div>
     )
     
