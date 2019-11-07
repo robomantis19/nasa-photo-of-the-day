@@ -31,3 +31,13 @@
     transform: rotate(360deg);
   }
 }
+
+.CarouselItem{
+  width: 500px;
+  height: 100vh; 
+  object-fit: scale-down;
+}
+.Carousel{
+  width: 600px;
+  object-fit: scale-down;
+}
