@@ -1,6 +1,11 @@
 import React, {useState, useEffect} from 'react'; 
 import axios from 'axios'; 
 import NasaCard from './NasaCard'; 
+
+import Datetime from 'react-datetime'; 
+import moment from 'moment';
+
+
 import {
     Carousel,
     CarouselItem,
@@ -9,12 +14,14 @@ import {
     CarouselCaption
   } from 'reactstrap';
   
+  const DateTime =  <Datetime   locale= 'en' placeholder="YYYY/MM/DD/" dateFormat="YYYY/MM/DD" value={''} timeFormat={false}/>
+
 function NasaPhoto(){
     const [pic, setPic] = useState([])
     const [day, setDay] = useState(['2019-10-14'])
     const APIkey = "98REzccm6Ml8n54NaB9XPz4R7nADaOI4iEOOlSj9"; 
     useEffect(() => { 
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${APIkey}&start_date=2019-10-07&end_date=2019-11-07 `)
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${APIkey}&start_date=2019-11-01&end_date=2019-11-07 `)
             .then(res => { 
                 console.log(res.data);
                 setPic(res.data); 
@@ -32,8 +39,8 @@ function NasaPhoto(){
             altText: `Slide ${index}`,
             header: `Title: ${el.title}    -----    Date: ${el.date}`,
             caption: `${el.explanation}`,
-           
-            key: `{index}`
+            index: `${index}`,
+            key: `${index}`
           })
         return items;
           
@@ -74,6 +81,7 @@ function NasaPhoto(){
     });
 
     return (
+    <div className="halfSides">
         <Carousel
         className="Carousel"
         
@@ -82,32 +90,37 @@ function NasaPhoto(){
         next={next}
         previous={previous}
         >
+        
         <CarouselIndicators  items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
         </Carousel>
+        <div>
+            {DateTime}
+            {pic.map((item, index) => {
+
+            return (
+                <NasaCard 
+                key = {index}
+                index = {index}
+                day = {item.day}
+                setDay = {setDay}
+                title = {item.title}
+                date = {item.date}
+                image = {item.hdurl}
+                explanation = {item.explanation}
+                />
+
+            )})}
+        </div>
+    </div>
     );
 }
         
 //     return (
 
-//         <div>
-//             {pic.map((item, index) => {
 
-//             return (
-//                 <NasaCard 
-//                 key = {index}
-//                 day = {item.day}
-//                 setDay = {setDay}
-//                 title = {item.title}
-//                 date = {item.date}
-//                 image = {item.hdurl}
-//                 explanation = {item.explanation}
-//                 />
-
-//             )})}
-//         </div>
 //     )
 // };
 

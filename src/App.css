@@ -32,6 +32,9 @@
   }
 }
 
+.halfSides{
+  display: flex;
+}
 .CarouselItem{
   width: 500px;
   height: 100vh; 
@@ -40,4 +43,9 @@
 .Carousel{
   width: 600px;
   object-fit: scale-down;
+}
+
+.card{
+  width: 400px;
+  height: 1200px;
 }
