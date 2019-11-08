@@ -60,8 +60,17 @@ function NasaCard(props){
         );
         
     },[])
-
-    
+    const [displayNone, setdisplayNone]= useState();
+    function clickMe(){
+        
+        return  <CardText style={{display:`${displayNone}`}}
+            
+            ref={element => {
+            textRef = element;
+            }}
+            height="100%">{props.explanation}</CardText>
+        // return <Button>Button</Button>
+    }
     
     return (
         <div>
@@ -128,11 +137,12 @@ function NasaCard(props){
                         imgRef = element;
                         }} 
                         width="100%" src={props.image} alt="Card image cap" />
-                        <CardText ref={element => {
+                        {/* <CardText ref={element => {
                         textRef = element;
                         }}
-                        height="100%">{props.explanation}</CardText>
-                        <Button>Button</Button>
+                        height="100%">{props.explanation}</CardText> */}
+                        {clickMe()}
+                        <Button onClick={() => setdisplayNone('none')}>Button</Button>
                         </CardBody>
                     </Card>
                 {/* </Stack>    */}
