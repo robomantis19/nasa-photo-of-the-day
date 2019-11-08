@@ -36,16 +36,20 @@
   display: flex;
 }
 .CarouselItem{
-  width: 500px;
-  height: 100vh; 
-  object-fit: scale-down;
+  width: 1000px;
+  height: 1500px; 
+  object-fit: fill;
 }
 .Carousel{
-  width: 600px;
-  object-fit: scale-down;
+  width: 1000px;
+  object-fit: fill;
 }
 
 .card{
   width: 400px;
   height: 1200px;
+}
+.caption{
+  /* padding-top: -400px; */
+  margin-bottom: 400px;
 }
